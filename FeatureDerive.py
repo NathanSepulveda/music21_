@@ -16,7 +16,16 @@ MostCommonPitchClassList = []
 MostCommonPitchClassRelevanceList = []
 AmbitusList = []
 DirectionList = []
-
+StepWiseMotionList = []
+RepeatedNotesList = []
+PrimaryRegisterList = []
+ImportanceOfMiddleRegisterList = []
+ImportanceOfBassRegisterList = []
+ImportanceOfHighRegisterList = []
+PitchVarietyList = []
+NoteDensityList = []
+MostCommonMelodicIntervalList = []
+MostCommonMelodicIntervalPrevalenceList = []
 
 for work in listOfWorks:
     print(work)
@@ -57,24 +66,63 @@ for work in listOfWorks:
     fp = features.jSymbolic.MostCommonPitchClassPrevalenceFeature(firstMelody)
     ambitus = firstMelody.analyze('ambitus')
     fd = features.jSymbolic.DirectionOfMotionFeature(firstMelody)
-    print(dir(fd))
+    fSw = features.jSymbolic.StepwiseMotionFeature(firstMelody)
+    fRn = features.jSymbolic.RepeatedNotesFeature(firstMelody)
+    primaryRegister = features.jSymbolic.PrimaryRegisterFeature(firstMelody).extract().vector[0]
+    importanceOfMiddleRegister = features.jSymbolic.ImportanceOfMiddleRegisterFeature(firstMelody).extract().vector[0]
+    importanceOfBassRegister = features.jSymbolic.ImportanceOfBassRegisterFeature(firstMelody).extract().vector[0]
+    importanceOfHighRegister = features.jSymbolic.ImportanceOfHighRegisterFeature(firstMelody).extract().vector[0]
+    pitchVariety = features.jSymbolic.PitchVarietyFeature(firstMelody).extract().vector[0]
+    noteDensity = features.jSymbolic.PitchVarietyFeature(firstMelody).extract().vector[0]
+    mostCommonInterval = features.jSymbolic.MostCommonMelodicIntervalFeature(firstMelody).extract().vector[0]
+    mostCommonIntervalPrevalence = features.jSymbolic.MostCommonMelodicIntervalPrevalenceFeature(firstMelody).extract().vector[0]
 
     range = str(ambitus).split(" ")[1].split('>')[0]
 
     mostCommonPitchClass = fe.extract().vector[0]
     mostCommonPitchClassPrevalence = fp.extract().vector[0]
     direction = fd.extract().vector[0]
+    stepwiseMotionPercentage = fSw.extract().vector[0]
+    repeatedNotesPercentage = fRn.extract().vector[0]
+   
     print(fe.extract().vector)
     print(fp.extract().vector)
     NotesPercentageList.append(notesPercentage)
     RestPercentageList.append(restsPercentage)
     MostCommonPitchClassList.append(mostCommonPitchClass)
     MostCommonPitchClassRelevanceList.append(mostCommonPitchClassPrevalence)
+    StepWiseMotionList.append(stepwiseMotionPercentage)
     AmbitusList.append(range)
     DirectionList.append(direction)
+    RepeatedNotesList.append(repeatedNotesPercentage)
+    PrimaryRegisterList.append(primaryRegister)
+    ImportanceOfMiddleRegisterList.append(importanceOfMiddleRegister)
+    ImportanceOfBassRegisterList.append(importanceOfBassRegister)
+    ImportanceOfHighRegisterList.append(importanceOfHighRegister)
+    PitchVarietyList.append(pitchVariety)
+    NoteDensityList.append(noteDensity)
+    MostCommonMelodicIntervalList.append(mostCommonInterval)
+    MostCommonMelodicIntervalPrevalenceList.append(mostCommonIntervalPrevalence)
 
 
-dictToTest = {'Notes Percentage': NotesPercentageList, 'Rest Percentage' : RestPercentageList, 'Most Common Pitch Class': MostCommonPitchClassList, 'Most Common Pitch Class Prevalence': MostCommonPitchClassRelevanceList,
-                'Ambitus': AmbitusList, "Direction": DirectionList}
+
+
+
+dictToTest = {'Notes Percentage': NotesPercentageList, 
+              'Rest Percentage' : RestPercentageList, 
+              'Most Common Pitch Class': MostCommonPitchClassList, 
+              'Most Common Pitch Class Prevalence': MostCommonPitchClassRelevanceList,
+              'Ambitus': AmbitusList, 
+              "Direction": DirectionList, 
+              'Stepwise Motion Percentage': StepWiseMotionList,
+              "Repeated Notes Percentage" : RepeatedNotesList, 
+              "Primary Register": PrimaryRegisterList, 
+              "Pitch Variety": PitchVarietyList,
+              "Note Density": NoteDensityList, 
+              "Most Common Melodic Interval": MostCommonMelodicIntervalList, 
+              "Most Common Melodic Interval Prevalence": MostCommonMelodicIntervalPrevalenceList,
+              "Importance of Middle Register": ImportanceOfMiddleRegisterList,
+              "Importance of Bass Register": ImportanceOfBassRegisterList,
+              "Importance of High Register": ImportanceOfHighRegisterList}
 df = pd.DataFrame(dictToTest)
 df.to_csv('file2.csv')

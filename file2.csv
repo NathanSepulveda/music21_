@@ -1,3 +1,3 @@
-,Notes Percentage,Rest Percentage,Most Common Pitch Class,Most Common Pitch Class Prevalence,Ambitus,Direction
-0,0.75,0.25,7,0.4,m6,0.2
-1,0.78,0.23,7,0.4,m6,0.21052631578947367
+,Notes Percentage,Rest Percentage,Most Common Pitch Class,Most Common Pitch Class Prevalence,Ambitus,Direction,Stepwise Motion Percentage,Repeated Notes Percentage,Primary Register,Pitch Variety,Note Density,Most Common Melodic Interval,Most Common Melodic Interval Prevalence,Importance of Middle Register,Importance of Bass Register,Importance of High Register
+0,0.75,0.25,7,0.4,m6,0.2,0.42105263157894735,0.21052631578947367,47.0,4,4,0,0.21052631578947367,0.0,1.0,0.0
+1,0.79,0.21,7,0.4,m6,0.18181818181818182,0.42857142857142855,0.21428571428571427,47.0,4,4,0,0.21428571428571427,0.0,1.0,0.0
