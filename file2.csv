@@ -1,3 +1,5 @@
-,Notes Percentage,Rest Percentage,Most Common Pitch Class,Most Common Pitch Class Prevalence,Ambitus,Direction,Stepwise Motion Percentage,Repeated Notes Percentage,Primary Register,Pitch Variety,Note Density,Most Common Melodic Interval,Most Common Melodic Interval Prevalence,Importance of Middle Register,Importance of Bass Register,Importance of High Register
-0,0.75,0.25,7,0.4,m6,0.2,0.42105263157894735,0.21052631578947367,47.0,4,4,0,0.21052631578947367,0.0,1.0,0.0
-1,0.79,0.21,7,0.4,m6,0.18181818181818182,0.42857142857142855,0.21428571428571427,47.0,4,4,0,0.21428571428571427,0.0,1.0,0.0
+,Notes Percentage,Rest Percentage,Most Common Pitch Class,Most Common Pitch Class Prevalence,Degree of Pentatonicism,Ambitus,Direction,Stepwise Motion Percentage,Repeated Notes Percentage,Primary Register,Pitch Variety,Note Density,Most Common Melodic Interval,Most Common Melodic Interval Prevalence,Importance of Middle Register,Importance of Bass Register,Importance of High Register
+0,0.71,0.29,7,0.4,0.8,m6,0.18181818181818182,0.42857142857142855,0.21428571428571427,47.0,4,4,0,0.21428571428571427,0.0,1.0,0.0
+1,0.89,0.11,3,0.2727272727272727,1.0,P8,0.2777777777777778,0.42857142857142855,0.14285714285714285,65.81818181818181,6,6,2,0.42857142857142855,1.0,0.0,0.0
+2,1.00,0.00,3,0.3333333333333333,0.7777777777777778,P5,0.25,1.0,0.0,63.333333333333336,5,5,2,0.625,1.0,0.0,0.0
+3,0.94,0.06,7,0.7857142857142857,0.9642857142857143,m6,0.5555555555555556,0.21818181818181817,0.6727272727272727,66.35714285714286,5,5,0,0.6727272727272727,1.0,0.0,0.0

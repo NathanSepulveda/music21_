@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 corpus.addPath('/Users/nathansepulveda/Desktop/TEST')
 
-sadness = corpus.parse("Fancy.xml")
-cello = sadness.getElementById("Spiked Bass")
+sadness = corpus.parse("0084.xml")
+cello = sadness.getElementById("Bass Hook")
 measureStart = int(input("Start"))
 measureEnd = int(input("End"))
 
